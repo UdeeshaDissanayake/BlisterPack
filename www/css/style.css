@@ -1,0 +1,43 @@
+/* Empty. Add your own CSS if you like */
+#veil {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:100%;
+    width:100%;
+    cursor: not-allowed;
+    filter: alpha(opacity=60);
+    opacity: 0.6;
+    background: #000000 url(http://www.wingo.com/angular/AngularShieldLogo.png) no-repeat center;
+}
+#feedLoading {
+    position: absolute;
+    top:200px;
+    width:100%;
+    text-align: center;
+    font-size: 4em;
+    color:white;
+    text-shadow: 2px 2px 2px #021124;
+}
+.log{
+    background:#1aacc3;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    height: 260px;
+    margin: auto;
+    z-index: 2;
+    position: relative;
+}
+.login {
+    background:url(../img/pill.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    height: 800px;
+    margin: auto;
+    z-index: 2;
+    position: relative;
+}

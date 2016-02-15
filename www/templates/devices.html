@@ -1,0 +1,111 @@
+<ion-header-bar align-title="left" class="bar-dark">
+  <h1 class="title">Blister Pack</h1>
+  <div class="buttons">
+    <button class="button" ng-click="logout()">Logout</button>
+  </div>
+</ion-header-bar>
+<ion-content>
+  <ion-list>
+  <!--
+    <div class="item item-toggle item-icon-left" ng-repeat="device in devices | filter:'on_off'">
+        <i class="icon ion-ios7-lightbulb-outline"></i>
+        {{ device.name }}
+        <label class="toggle">
+          <input type="checkbox" ng-model="device.value" ng-change="change(device)">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+    </div>
+    <div class="item range range-energized" ng-repeat="device in devices | filter:'dimmer'">
+        <i class="icon ion-ios7-lightbulb-outline"></i>
+        {{ device.name }}
+        <input type="range" name="volume" min="0" step="10" max="100" ng-model="device.value" ng-change="change(device)">
+        <i class="icon ion-ios7-lightbulb"></i>
+        {{ device.value }} 
+    </div>
+    <div class="item range range-assertive" ng-repeat="device in devices | filter:'thermostat'">
+        <i class="icon ion-ios7-sunny-outline"></i>
+        {{ device.name }}
+        <input type="range" name="volume" min="15" max="25" ng-model="device.value" ng-change="change(device)">
+        <i class="icon ion-ios7-sunny"></i>
+        {{ device.value }} 
+    </div>
+  -->
+    <div class="button-bar">
+      <a ng-class="{'button button-energized': !started24, 'button button-outline button-energized': started24}" ng-click="myFunction25()">25</a>
+      <a ng-class="{'button button-stable': !started25, 'button button-outline button-stable': started25}" ng-click="myFunction26()">26</a>
+      <a ng-class="{'button button-assertive': !started26, 'button button-outline button-assertive': started26}" ng-click="myFunction27()">27</a>
+      <a ng-class="{'button button-positive': !started27, 'button button-outline button-positive': started27}" ng-click="myFunction28()">28</a>
+    </div>
+    <div class="button-bar">
+      <a ng-class="{'button button-energized': !started20, 'button button-outline button-energized': started20}" ng-click="myFunction21()">21</a>
+      <a ng-class="{'button button-stable': !started21, 'button button-outline button-stable': started21}" ng-click="myFunction22()">22</a>
+      <a ng-class="{'button button-assertive': !started22, 'button button-outline button-assertive': started22}" ng-click="myFunction23()">23</a>
+      <a ng-class="{'button button-positive': !started23, 'button button-outline button-positive': started23}" ng-click="myFunction24()">24</a>
+    </div>
+    <div class="button-bar">
+      <a ng-class="{'button button-energized': !started16, 'button button-outline button-energized': started16}" ng-click="myFunction17()">17</a>
+      <a ng-class="{'button button-stable': !started17, 'button button-outline button-stable': started17}" ng-click="myFunction18()">18</a>
+      <a ng-class="{'button button-assertive': !started18, 'button button-outline button-assertive': started18}" ng-click="myFunction19()">19</a>
+      <a ng-class="{'button button-positive': !started19, 'button button-outline button-positive': started19}" ng-click="myFunction20()">20</a>
+    </div>
+    <div class="button-bar">
+      <a ng-class="{'button button-energized': !started12, 'button button-outline button-energized': started12}" ng-click="myFunction13()">13</a>
+      <a ng-class="{'button button-stable': !started13, 'button button-outline button-stable': started13}" ng-click="myFunction14()">14</a>
+      <a ng-class="{'button button-assertive': !started14, 'button button-outline button-assertive': started14}" ng-click="myFunction15()">15</a>
+      <a ng-class="{'button button-positive': !started15, 'button button-outline button-positive': started15}" ng-click="myFunction16()">16</a>
+    </div>
+    <div class="button-bar">
+      <a ng-class="{'button button-energized': !started8, 'button button-outline button-energized': started8}" ng-click="myFunction9()">9</a>
+      <a ng-class="{'button button-stable': !started9, 'button button-outline button-stable': started9}" ng-click="myFunction10()">10</a>
+      <a ng-class="{'button button-assertive': !started10, 'button button-outline button-assertive': started10}" ng-click="myFunction11()">11</a>
+      <a ng-class="{'button button-positive': !started11, 'button button-outline button-positive': started11}" ng-click="myFunction12()">12</a>
+    </div>
+    <div class="button-bar">
+      <a ng-class="{'button button-energized': !started4, 'button button-outline button-energized': started4}" ng-click="myFunction5()">5</a>
+      <a ng-class="{'button button-stable': !started5, 'button button-outline button-stable': started5}" ng-click="myFunction6()">6</a>
+      <a ng-class="{'button button-assertive': !started6, 'button button-outline button-assertive': started6}" ng-click="myFunction7()">7</a>
+      <a ng-class="{'button button-positive': !started7, 'button button-outline button-positive': started7}" ng-click="myFunction8()">8</a>
+    </div>
+<div class="button-bar">
+  <a ng-class="{'button button-energized': !started, 'button button-outline button-energized': started}" ng-click="myFunction1()">1</a>
+  <a ng-class="{'button button-stable': !started1, 'button button-outline button-stable': started1}" ng-click="myFunction2()">2</a>
+  <a ng-class="{'button button-assertive': !started2, 'button button-outline button-assertive': started2}" ng-click="myFunction3()">3</a>
+  <a ng-class="{'button button-positive': !started3, 'button button-outline button-positive': started3}" ng-click="myFunction4()">4</a>
+</div>
+
+
+
+
+
+
+
+  </ion-list>
+  <div ng-repeat="medication in medications" class="list card">
+
+  <a  class="item item-icon-left">
+    <i class="icon ion-medkit"></i>
+    {{medication.quantity}} {{medication.drug}}
+  </a>
+  <!--
+  <a  class="item item-icon-left">
+    <i class="icon ion-medkit"></i>
+    Enter phone number
+  </a>
+
+  <a  class="item item-icon-left">
+    <i class="icon ion-medkit"></i>
+    Enter wireless password
+  </a>
+
+  <a  class="item item-icon-left">
+    <i class="icon ion-medkit"></i>
+    Enter card information
+  </a>
+ -->
+</div>
+  <div id="veil" ng-show="isLoading"></div>
+  <div id="feedLoading" ng-show="isLoading">Loading...</div>
+</ion-content>
+
